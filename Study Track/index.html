@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Study Track</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="bg-overlay"></div>
+
+		<main class="app">
+			<header class="app-header">
+				<h1>Study Track</h1>
+				<p class="tag">Focus, track, and finish your study sessions</p>
+			</header>
+
+			<section class="controls">
+				<input id="taskInput" placeholder="Add a task (e.g. Read chapter 3)" />
+				<div class="duration">
+					<input id="durationInput" type="number" min="1" value="25" />
+					<label for="durationInput">min</label>
+				</div>
+				<button id="addBtn" class="btn primary">Add</button>
+			</section>
+
+			<section class="content">
+				<aside class="tasks">
+					<h2>Tasks</h2>
+					<ul id="taskList" class="task-list"></ul>
+				</aside>
+
+				<section class="timer-card">
+					<h2 id="currentTaskTitle">No task selected</h2>
+					<div id="timerDisplay" class="timer-display">00:00</div>
+					<div class="timer-controls">
+						<button id="startBtn" class="btn">Start</button>
+						<button id="pauseBtn" class="btn">Pause</button>
+						<button id="resetBtn" class="btn">Reset</button>
+					</div>
+					<div id="progressWrap" class="progress-wrap">
+						<div id="progressBar" class="progress-bar" style="width:0%"></div>
+					</div>
+				</section>
+			</section>
+
+			<footer class="app-footer">
+				<small>Data saved to your browser. Work offline.</small>
+			</footer>
+		</main>
+
+		<script src="app.js" defer></script>
+	</body>
+</html>
